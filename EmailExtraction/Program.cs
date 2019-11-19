@@ -31,19 +31,19 @@ namespace EmailExtraction
 
            for (i=0; i<=readText.Length-13; i++)
             {
-           
-                var subStr = readText.Substring(readText.IndexOf("@"), 13);
-                int indexOfFirstAt = readText.IndexOf("@");
-                string modifiedReadText = readText.Substring(indexOfFirstAt + 1);
-                readText = modifiedReadText;
-
-                if (subStr.Contains("@softwire.com"))
+                // readText.indexOf();
+                //readText.Length > 0 && readText.Length <= 12
+                var subStr = readText.Substring(i, 13);
+                string domain = "@softwire.com";
+                if (readText.Substring(i, 13) == domain)
                 {
-                    counter = counter + 1;
+                    counter++;
+                    Console.WriteLine(subStr);
                     Console.WriteLine(counter);
                 }
                 
             }
+            Console.WriteLine("i is " + i);
 
           //  Console.WriteLine(readText.Length);
             Console.WriteLine(counter);
