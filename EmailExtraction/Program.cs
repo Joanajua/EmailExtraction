@@ -19,12 +19,12 @@ namespace EmailExtraction
             string readText = File.ReadAllText(@"../../sample.txt");
            
 
-           for (i=0; i<=readText.Length-13; i++)
+           for (i=0; i<=readText.Length-14; i++)
             {
                
-                var subStr = readText.Substring(i, 13);
-                string domain = "@softwire.com";
-                if (readText.Substring(i, 13) == domain)
+                var subStr = readText.Substring(i, 14);
+                string domain = "@softwire.com ";
+                if (readText.Substring(i, 14) == domain)
                 {
                     counter++;
                     Console.WriteLine(subStr);
